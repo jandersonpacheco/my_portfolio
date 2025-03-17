@@ -1,0 +1,94 @@
+body{
+    background-color: black;
+    color: #fff
+}
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 0 10vh;
+    font-size: 1.8vh;
+}
+
+.menuContainer{
+    display: flex;
+    flex-direction: row;
+    column-gap: 1.7vh;
+    font-size: 1.2vh;
+}
+
+.presentationSection{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 10vh;
+    font-size: 4vh;
+}
+
+.buttonContainer{
+    display: flex;
+    flex-direction: row;
+    column-gap: 1.5vh;
+}
+
+.profileImg{
+    max-height: 45vh;
+    border-radius: 45%;
+}
+
+.techPresentationSection{
+    background-color: #070707;
+    color: #fff
+}
+
+.techPresentationContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 5vh 5vh;
+}
+
+.aboutSection{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10vh 10vh 0 15vh;
+}
+
+.competenseContainer{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.5vh;
+}
+
+.compentenseContent{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 1.5vh;
+}
+
+.compentenseImg{
+    max-width: 6vh;
+}
+
+.compentenseTitle{
+    font-size: 1.8vh;
+}
+
+.aboutMeTitle{
+    font-size: 5vh;
+}
+
+.aboutMeContainer{
+    max-width: 50vh;
+}
+
+.projectSectionTitle{
+    display: flex;
+    justify-content: center;
+    font-size: 5vh;
+}
