@@ -19,9 +19,9 @@ const Home = () => {
             </nav>
             <section className={styles.presentationSection}>
                 <div className={styles.presentationContainer}>
-                    <h1 className={styles.presentationContent}>Olá,</h1>
-                    <h1 className={styles.presentationContent}>Me chamo Janderson</h1>
-                    <h1 className={styles.presentationContent}>Desenvolvedor Front-End</h1>
+                    <h1 className={styles.presentationContent}>Olá<span className={styles.colorChange}>,</span></h1>
+                    <h3 className={styles.presentationContentName}>Me chamo Janderson</h3>
+                    <h1 className={styles.presentationContent}>Desenvolvedor Front<span className={styles.colorChange}>-</span>End</h1>
                     <div className={styles.buttonContainer}>
                         <button className={styles.newJob}>Tem um projeto para mim?</button>
                         <button className={styles.myResume}>Meu Currículo</button>

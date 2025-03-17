@@ -1,5 +1,11 @@
+@import url('href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&display=swap');
+
 body{
-    background-color: black;
+    font-family: "Big Shoulders", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    background-color: #070707;
     color: #fff
 }
 
@@ -8,8 +14,15 @@ body{
     flex-direction: row;
     justify-content: space-between;
     align-items: baseline;
-    margin: 0 10vh;
+    padding: 0 10vh;
+    margin: 0 30vh;
     font-size: 1.8vh;
+    background-color: #000;
+}
+
+.menu:hover{
+    color:rgb(221, 128, 6);
+    cursor: pointer;
 }
 
 .menuContainer{
@@ -23,9 +36,15 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 0 10vh;
+    margin: 0 30vh;
+    padding: 0 10vh;
     font-size: 4vh;
+    background-color: #000;
 }
+
+.presentationContentName{
+    font-weight: 100;
+    }
 
 .buttonContainer{
     display: flex;
@@ -36,6 +55,7 @@ body{
 .profileImg{
     max-height: 45vh;
     border-radius: 45%;
+
 }
 
 .techPresentationSection{
@@ -47,7 +67,8 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin: 5vh 5vh;
+    margin: 2vh 23vh;
+    padding: 0 10vh;
 }
 
 .aboutSection{
@@ -55,7 +76,9 @@ body{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 10vh 10vh 0 15vh;
+    margin: 2vh 30vh 0 30vh;
+    padding: 0 10vh;
+    background-color: #000;
 }
 
 .competenseContainer{
@@ -91,4 +114,9 @@ body{
     display: flex;
     justify-content: center;
     font-size: 5vh;
+    background-color: #000;
+}
+
+.colorChange{
+    color:rgb(221, 128, 6)
 }
