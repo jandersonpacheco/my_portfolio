@@ -1,8 +1,14 @@
 import styles from './home.module.css'
 import hosting from '../public/assets/hosting.png'
 import webDev from '../public/assets/dev_web.png'
+import profile from '../public/assets/profile.jpeg'
+import download from '../public/assets/download.png'
 
 const Home = () => {
+
+    const handleDownload = () => {
+        window.open("https://drive.google.com/file/d/1UTFUkEpclkOCvHn0LSHHidV3T2pnx0p4/view?usp=drive_link", "_blank");
+    }
 
     return(
         <>
@@ -24,11 +30,11 @@ const Home = () => {
                     <h1 className={styles.presentationContent}>Desenvolvedor Front<span className={styles.colorChange}>-</span>End</h1>
                     <div className={styles.buttonContainer}>
                         <button className={styles.newJob}>Tem um projeto para mim?</button>
-                        <button className={styles.myResume}>Meu Currículo</button>
+                        <button className={styles.myResume} onClick={handleDownload}>Meu Currículo <img className={styles.downloadImg} src={download} /></button>
                     </div>
                 </div>
                 <div>
-                    <img className={styles.profileImg} src='https://cdn-sites-images.46graus.com/files/photos/c3daf66d/d75f6cc8-a29c-4179-aecd-5827c77ce948/gianini-15-512x768.jpg' />
+                    <img className={styles.profileImg} src={profile} />
                 </div>
             </section>
             <section className={styles.techPresentationSection}>
@@ -40,6 +46,13 @@ const Home = () => {
                     <h1 className={styles.techPresentationContent}>REACT</h1>
                     <h1 className={styles.techPresentationContent}>GIT</h1>
                     <h1 className={styles.techPresentationContent}>GITHUB</h1>
+                </div>
+            </section>
+            <section className={styles.projectSection}>
+                <div className={styles.projectContainer}>
+                    <h1 className={styles.projectSectionTitle}>Projetos</h1>
+                    <div className={styles.projectContent}>
+                    </div>
                 </div>
             </section>
             <section className={styles.aboutSection}>
@@ -56,12 +69,6 @@ const Home = () => {
                 <div className={styles.aboutMeContainer}>
                     <h1 className={styles.aboutMeTitle}>Sobre Mim</h1>
                     <p className={styles.aboutMeContent}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae praesentium provident aliquam eaque at fugiat! Ut nulla sequi, adipisci quae necessitatibus, delectus vitae dolorum nobis perspiciatis incidunt quisquam nostrum! Voluptate.</p>
-                </div>
-            </section>
-            <section className={styles.projectSection}>
-                <h1 className={styles.projectSectionTitle}>Projetos</h1>
-                <div className={styles.projectContainer}>
-
                 </div>
             </section>
         </>
