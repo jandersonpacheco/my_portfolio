@@ -3,6 +3,11 @@ import hosting from '../public/assets/hosting.png'
 import webDev from '../public/assets/dev_web.png'
 import profile from '../public/assets/profile.jpeg'
 import download from '../public/assets/download.png'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import 'swiper/css'
+import {Navigation, Pagination} from 'swiper/modules'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
 
 const Home = () => {
 

@@ -9,6 +9,11 @@ body{
     color: #fff
 }
 
+img{
+    width:200px;
+    height:auto
+}
+
 .nav{
     display: flex;
     flex-direction: row;
@@ -18,6 +23,10 @@ body{
     margin: 0 30vh;
     font-size: 1.8vh;
     background: linear-gradient(145deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 93%, rgba(221,128,6,1) 100%);}
+
+    .titleName{
+        font-size: 2vh;
+    }
 
 .menu:hover{
     color:rgb(221, 128, 6);
@@ -90,7 +99,7 @@ body{
 }
 
 .techPresentationSection:hover{
-    color:#dd8006
+    color:#fff
 }
 
 .techPresentationContainer{
@@ -151,4 +160,8 @@ body{
 
 .colorChange{
     color:#dd8006
+}
+
+.projectImg{
+    max-width: 15vh;
 }
