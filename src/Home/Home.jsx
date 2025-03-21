@@ -1,30 +1,50 @@
+import { useState, useEffect } from 'react'
 import styles from './home.module.css'
 import hosting from '../public/assets/hosting.png'
 import webDev from '../public/assets/dev_web.png'
 import profile from '../public/assets/profile.jpeg'
 import download from '../public/assets/download.png'
 import Carousel from './Carousel'
+import ScrollSpy from 'react-ui-scrollspy'
 
 const Home = () => {
+    const [isScrolled, setIsScrolled] = useState(false)
 
     const handleDownload = () => {
-        window.open("https://drive.google.com/file/d/1UTFUkEpclkOCvHn0LSHHidV3T2pnx0p4/view?usp=drive_link", "_blank");
+        window.open("https://drive.google.com/file/d/1UTFUkEpclkOCvHn0LSHHidV3T2pnx0p4/view?usp=drive_link", "_blank")
     }
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 50) {
+                setIsScrolled(true)
+            } else {
+                setIsScrolled(false)
+            }
+        }
+
+        window.addEventListener('scroll', handleScroll);
+    }, []);
 
     return(
         <>
-            <nav className={styles.nav}>
-            <div className={styles.titleNameContainter}>
-                    <h1 className={styles.titleName}>Janderson Oliveira</h1>
-                </div>
-                <div className={styles.menuContainer}>
-                <h1 className={styles.menu}>Home</h1>
-                <h1 className={styles.menu}>Sobre Mim</h1>
-                <h1 className={styles.menu}>Projetos</h1>
-                <h1 className={styles.menu}>Contatos</h1>
-                </div>
-            </nav>
-            <section className={styles.presentationSection}>
+            <ScrollSpy
+                items={['home', 'projects', 'about-me', 'contact-me']}
+                currentClassName="active-scroll-spy"
+            >
+                <nav className={`${styles.nav} ${isScrolled ? styles.scrolled : ''}`}>
+                <div className={styles.titleNameContainter}>
+                        <h1 className={styles.titleName}>Janderson Oliveira</h1>
+                    </div>
+                    <div className={styles.menuContainer}>
+                    <h2 className={styles.menu} data-to-scrollspy-id="home">Home</h2>
+                    <h2 className={styles.menu} data-to-scrollspy-id="projects">Projetos</h2>
+                    <h2 className={styles.menu} data-to-scrollspy-id="about-me">Sobre Mim</h2>
+                    <h2 className={styles.menu} data-to-scrollspy-id="contact-me">Contatos</h2>
+                    </div>
+                </nav>
+
+            <section className={styles.presentationSection} id="home">
                 <div className={styles.presentationContainer}>
                     <h1 className={styles.presentationContent}>Olá<span className={styles.colorChange}>,</span></h1>
                     <h3 className={styles.presentationContentName}>Me chamo Janderson</h3>
@@ -49,7 +69,7 @@ const Home = () => {
                     <h1 className={styles.techPresentationContent}>GITHUB</h1>
                 </div>
             </section>
-            <section className={styles.projectSection}>
+            <section className={styles.projectSection} id="project">
                 <div className={styles.projectContainer}>
                     <h1 className={styles.projectSectionTitle}>Projetos</h1>
                     <h1 className={styles.projectName}>Rastreador de Séries</h1>
@@ -73,7 +93,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <section className={styles.aboutSection}>
+            <section className={styles.aboutSection} id="about-me">
                 <div className={styles.competenseContainer}>
                     <div className={styles.compentenseContent}>
                         <img className={styles.compentenseImg} src={webDev} />
@@ -89,6 +109,7 @@ const Home = () => {
                     <p className={styles.aboutMeContent}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae praesentium provident aliquam eaque at fugiat! Ut nulla sequi, adipisci quae necessitatibus, delectus vitae dolorum nobis perspiciatis incidunt quisquam nostrum! Voluptate.</p>
                 </div>
             </section>
+            </ScrollSpy>
         </>
     )
 }

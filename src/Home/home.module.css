@@ -15,6 +15,8 @@ img{
 }
 
 .nav{
+    position: fixed;
+    width: 60.5%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -22,11 +24,17 @@ img{
     padding: 0 10vh;
     margin: 0 30vh;
     font-size: 1.8vh;
-    background: linear-gradient(145deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 93%, rgba(221,128,6,1) 100%);}
+    background: linear-gradient(145deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 93%, rgba(221,128,6,1) 100%);
+    transition: all 0.3s ease;
+}
 
-    .titleName{
+.nav.scrolled {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.titleName{
         font-size: 2vh;
-    }
+}
 
 .menu:hover{
     color:rgb(221, 128, 6);
@@ -34,6 +42,7 @@ img{
 }
 
 .menuContainer{
+
     display: flex;
     flex-direction: row;
     column-gap: 1.7vh;
@@ -160,6 +169,7 @@ img{
     flex-direction: column;
     justify-content: center;
     margin: 0 30vh;
+    padding-bottom: 100vh;
     background-color: #000;
 }
 
@@ -185,7 +195,7 @@ img{
     width: 55vh;
     border-radius: 5%;
 }
-  /* Estilos para as setas de navegação */
+
 .carouselContainer {
     position: relative;
     width: 100%;
@@ -242,4 +252,9 @@ img{
     display: flex;
     margin: 0 4.5vh;
     margin: 0 4.5vh 1vh
+}
+
+.active-scroll-spy {
+    color: #dd8006;
+    font-weight: bold
 }
