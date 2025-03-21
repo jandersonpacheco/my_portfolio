@@ -49,6 +49,14 @@ const Home = () => {
                     <h1 className={styles.techPresentationContent}>GITHUB</h1>
                 </div>
             </section>
+            <section className={styles.projectSection}>
+                <div className={styles.projectContainer}>
+                    <h1 className={styles.projectSectionTitle}>Projetos</h1>
+                    <div className={styles.projectContent}>
+                        <Carousel />
+                    </div>
+                </div>
+            </section>
             <section className={styles.aboutSection}>
                 <div className={styles.competenseContainer}>
                     <div className={styles.compentenseContent}>
@@ -63,14 +71,6 @@ const Home = () => {
                 <div className={styles.aboutMeContainer}>
                     <h1 className={styles.aboutMeTitle}>Sobre Mim</h1>
                     <p className={styles.aboutMeContent}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae praesentium provident aliquam eaque at fugiat! Ut nulla sequi, adipisci quae necessitatibus, delectus vitae dolorum nobis perspiciatis incidunt quisquam nostrum! Voluptate.</p>
-                </div>
-            </section>
-            <section className={styles.projectSection}>
-                <div className={styles.projectContainer}>
-                    <h1 className={styles.projectSectionTitle}>Projetos</h1>
-                    <div className={styles.projectContent}>
-                        <Carousel />
-                    </div>
                 </div>
             </section>
         </>
