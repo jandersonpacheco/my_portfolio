@@ -3,11 +3,7 @@ import hosting from '../public/assets/hosting.png'
 import webDev from '../public/assets/dev_web.png'
 import profile from '../public/assets/profile.jpeg'
 import download from '../public/assets/download.png'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import 'swiper/css'
-import {Navigation, Pagination} from 'swiper/modules'
-import 'swiper/css/navigation'
-import 'swiper/css/pagination'
+import Carousel from './Carousel'
 
 const Home = () => {
 
@@ -53,13 +49,6 @@ const Home = () => {
                     <h1 className={styles.techPresentationContent}>GITHUB</h1>
                 </div>
             </section>
-            <section className={styles.projectSection}>
-                <div className={styles.projectContainer}>
-                    <h1 className={styles.projectSectionTitle}>Projetos</h1>
-                    <div className={styles.projectContent}>
-                    </div>
-                </div>
-            </section>
             <section className={styles.aboutSection}>
                 <div className={styles.competenseContainer}>
                     <div className={styles.compentenseContent}>
@@ -74,6 +63,14 @@ const Home = () => {
                 <div className={styles.aboutMeContainer}>
                     <h1 className={styles.aboutMeTitle}>Sobre Mim</h1>
                     <p className={styles.aboutMeContent}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae praesentium provident aliquam eaque at fugiat! Ut nulla sequi, adipisci quae necessitatibus, delectus vitae dolorum nobis perspiciatis incidunt quisquam nostrum! Voluptate.</p>
+                </div>
+            </section>
+            <section className={styles.projectSection}>
+                <div className={styles.projectContainer}>
+                    <h1 className={styles.projectSectionTitle}>Projetos</h1>
+                    <div className={styles.projectContent}>
+                        <Carousel />
+                    </div>
                 </div>
             </section>
         </>

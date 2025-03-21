@@ -1,4 +1,5 @@
 
+import Carousel from './Home/Carousel'
 import Home from './Home/Home'
 
 function App() {

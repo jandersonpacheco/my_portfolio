@@ -165,3 +165,7 @@ img{
 .projectImg{
     max-width: 15vh;
 }
+
+.projectContent {
+    overflow: hidden;
+}
