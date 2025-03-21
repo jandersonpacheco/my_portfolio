@@ -175,17 +175,71 @@ img{
 .projectContent {
     max-width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-self: flex-start;
     justify-content: center;
-    margin: 0 10vh
+    margin: 0 10vh;    
 }
 
 .slide{
-    width: 60vh;
+    width: 55vh;
+    border-radius: 5%;
 }
   /* Estilos para as setas de navegação */
 .carouselContainer {
     position: relative;
     width: 100%;
+}
+
+.projectName{
+    font-size: 3vh;
+    display: flex;
+    align-self: flex-start;
+    margin: 0 10vh 1.5vh
+}
+
+.projectDescription{
+    font-size: 2vh;
+    display: flex;
+    align-self: flex-start;
+    margin: 0 4.5vh 2vh
+}
+
+.highlightTitle{
+    font-size: 2vh;
+    font-weight: 600;
+    display: flex;
+    margin: 0 4.5vh
+}
+
+.highlightContainer{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vh;
+}
+
+.highlight{
+    font-size: 1.8vh;
+    display: flex;
+    align-self: flex-start;
+}
+
+.techVariation{
+    font-weight: 200;
+}
+
+.projectDetail{
+    font-size: 2vh;
+    font-weight: 600;
+    display: flex;
+    margin: 0 4.5vh 1vh
+}
+
+.externalLink{
+    text-decoration: none;
+    color:#fff;
+    font-size: 2vh;
+    display: flex;
+    margin: 0 4.5vh;
+    margin: 0 4.5vh 1vh
 }
