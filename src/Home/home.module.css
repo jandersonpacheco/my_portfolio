@@ -42,7 +42,6 @@ img{
 }
 
 .menuContainer{
-
     display: flex;
     flex-direction: row;
     column-gap: 1.7vh;
@@ -55,7 +54,7 @@ img{
     justify-content: space-between;
     max-height: 70vh;
     margin: 0 30vh;
-    padding: 0 10vh;
+    padding: 5vh 10vh;
     font-size: 4vh;
     background: linear-gradient(145deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 62%, rgba(221,128,6,1) 100%)
 
@@ -121,47 +120,8 @@ img{
     padding: 0 10vh;
 }
 
-.aboutSection{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 30vh 0 30vh;
-    padding: 0 10vh;
-    background-color: #000;
-}
-
-.competenseContainer{
-    display: flex;
-    flex-direction: column;
-    row-gap: 2.5vh;
-}
-
-.compentenseContent{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    column-gap: 1.5vh;
-}
-
-.compentenseImg{
-    max-width: 6vh;
-}
-
-.compentenseTitle{
-    font-size: 1.8vh;
-}
-
-.aboutMeTitle{
-    font-size: 4vh;
-}
-
-.aboutMeContainer{
-    max-width: 50vh;
-}
-
-.colorChange{
-    color:#dd8006
+.activeLink{
+    color:#dd8006;
 }
 
 .projectSection{
@@ -254,7 +214,41 @@ img{
     margin: 0 4.5vh 1vh
 }
 
-.active-scroll-spy {
-    color: #dd8006;
-    font-weight: bold
+.aboutSection{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 30vh 0 30vh;
+    padding: 0 10vh 500px;
+    background-color: #000;
+}
+
+.competenseContainer{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.5vh;
+}
+
+.compentenseContent{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 1.5vh;
+}
+
+.compentenseImg{
+    max-width: 6vh;
+}
+
+.compentenseTitle{
+    font-size: 1.8vh;
+}
+
+.aboutMeTitle{
+    font-size: 4vh;
+}
+
+.aboutMeContainer{
+    max-width: 50vh;
 }

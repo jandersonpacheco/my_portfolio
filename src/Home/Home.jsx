@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-scroll'
 import styles from './home.module.css'
 import hosting from '../public/assets/hosting.png'
 import webDev from '../public/assets/dev_web.png'
 import profile from '../public/assets/profile.jpeg'
 import download from '../public/assets/download.png'
 import Carousel from './Carousel'
-import ScrollSpy from 'react-ui-scrollspy'
 
 const Home = () => {
     const [isScrolled, setIsScrolled] = useState(false)
@@ -24,27 +24,26 @@ const Home = () => {
         }
 
         window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
     }, []);
 
     return(
         <>
-            <ScrollSpy
-                items={['home', 'projects', 'about-me', 'contact-me']}
-                currentClassName="active-scroll-spy"
-            >
                 <nav className={`${styles.nav} ${isScrolled ? styles.scrolled : ''}`}>
                 <div className={styles.titleNameContainter}>
                         <h1 className={styles.titleName}>Janderson Oliveira</h1>
                     </div>
                     <div className={styles.menuContainer}>
-                    <h2 className={styles.menu} data-to-scrollspy-id="home">Home</h2>
-                    <h2 className={styles.menu} data-to-scrollspy-id="projects">Projetos</h2>
-                    <h2 className={styles.menu} data-to-scrollspy-id="about-me">Sobre Mim</h2>
-                    <h2 className={styles.menu} data-to-scrollspy-id="contact-me">Contatos</h2>
+                    <h2 className={styles.menu}><Link activeClass={styles.activeLink} to='home' spy={true} smooth={true} offset={-100} duration={500}>Início</Link></h2>
+                    <h2 className={styles.menu}><Link activeClass={styles.activeLink} to='projects' spy={true} smooth={true} offset={-30} duration={500}>Projetos</Link></h2>
+                    <h2 className={styles.menu}><Link activeClass={styles.activeLink} to='about-me' spy={true} smooth={true} offset={-30} duration={500}>Sobre Mim</Link></h2>
+                    <h2 className={styles.menu}><Link activeClass={styles.activeLink} to='contact-me' spy={true} smooth={true} offset={-30} duration={500}>Contatos</Link></h2>
                     </div>
                 </nav>
 
-            <section className={styles.presentationSection} id="home">
+            <section className={styles.presentationSection} id='home'>
                 <div className={styles.presentationContainer}>
                     <h1 className={styles.presentationContent}>Olá<span className={styles.colorChange}>,</span></h1>
                     <h3 className={styles.presentationContentName}>Me chamo Janderson</h3>
@@ -69,7 +68,7 @@ const Home = () => {
                     <h1 className={styles.techPresentationContent}>GITHUB</h1>
                 </div>
             </section>
-            <section className={styles.projectSection} id="project">
+            <section className={styles.projectSection} id='projects'>
                 <div className={styles.projectContainer}>
                     <h1 className={styles.projectSectionTitle}>Projetos</h1>
                     <h1 className={styles.projectName}>Rastreador de Séries</h1>
@@ -93,7 +92,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <section className={styles.aboutSection} id="about-me">
+            <section className={styles.aboutSection} id='about-me'>
                 <div className={styles.competenseContainer}>
                     <div className={styles.compentenseContent}>
                         <img className={styles.compentenseImg} src={webDev} />
@@ -109,7 +108,6 @@ const Home = () => {
                     <p className={styles.aboutMeContent}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae praesentium provident aliquam eaque at fugiat! Ut nulla sequi, adipisci quae necessitatibus, delectus vitae dolorum nobis perspiciatis incidunt quisquam nostrum! Voluptate.</p>
                 </div>
             </section>
-            </ScrollSpy>
         </>
     )
 }
