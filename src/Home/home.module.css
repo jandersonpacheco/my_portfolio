@@ -90,7 +90,7 @@ img{
     max-width: 3vh;
 }
 
-.myResume:hover, .newJob:hover{
+.myResume:hover, .newJob:hover, .externalLink:hover{
     background-color: #dd8006;
     color:#fff
 }
@@ -153,6 +153,7 @@ img{
 
 .slide{
     width: 55vh;
+    height: 38vh;
     border-radius: 5%;
 }
 
@@ -205,13 +206,26 @@ img{
     margin: 0 4.5vh 1vh
 }
 
-.externalLink{
-    text-decoration: none;
-    color:#fff;
-    font-size: 2vh;
+.externalLinkContainer{
     display: flex;
-    margin: 0 4.5vh;
-    margin: 0 4.5vh 1vh
+    flex-direction: row;
+    padding-bottom: 4vh;
+    margin-top: 3vh;
+}
+
+.externalLink{
+    display: flex;
+    align-items: center;
+    column-gap: 1vh;
+    border: 1px solid;
+    border-radius: 5%;
+    padding:1.5vh 1.5vh 1.5vh 1.5vh;
+    font-size: 1.5vh;
+    font-weight: 600;
+    border-color: #dd8006;
+    background-color: #000;
+    cursor: pointer;
+    margin: 0 4.5vh 1vh;
 }
 
 .aboutSection{
