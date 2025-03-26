@@ -53,7 +53,7 @@ const Home = () => {
                                 <img style={{maxWidth:'2.5vh'} } src='https://images.icon-icons.com/3685/PNG/512/github_logo_icon_229278.png'/>
                             </a>
                         </button>
-                        <button className={styles.myResume} style={{borderRadius:'50'}}>
+                        <button className={styles.myResume} style={{borderRadius:'50%'}}>
                             <a href='http://www.linkedin.com/in/janderson-oliveira-pacheco-749ab9141' target='_blank' style={{color:'#fff', textDecoration:'none'}}>
                             <img style={{maxWidth:'2.5vh', borderRadius:'50%'} } src='https://i.pinimg.com/736x/17/36/fa/1736fa4a3cc0444c3e9d742d1a070a47.jpg'/>
                             </a>
