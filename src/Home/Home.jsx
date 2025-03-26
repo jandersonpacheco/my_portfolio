@@ -1,17 +1,35 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-scroll'
 import styles from './home.module.css'
-import hosting from '../public/assets/hosting.png'
-import webDev from '../public/assets/dev_web.png'
 import profile from '../public/assets/profile.jpeg'
 import download from '../public/assets/download.png'
 import Carousel from './Carousel'
+import emailjs from '@emailjs/browser'
 
 const Home = () => {
     const [isScrolled, setIsScrolled] = useState(false)
+    const form = useRef()
 
     const handleDownload = () => {
         window.open("https://drive.google.com/file/d/1UTFUkEpclkOCvHn0LSHHidV3T2pnx0p4/view?usp=drive_link", "_blank")
+    }
+
+    const handleFormSubmit = (event) =>{
+        event.preventDefault()
+
+        emailjs
+            .sendForm('service_2yptnu9','template_cs3naam', form.current,{
+                publicKey: 'GMeEXPLnTEIZ7Jsnl'
+            })
+            .then(() =>{
+                console.log('Email enviado com sucesso!')
+                window.alert('Mensagem enviada com sucesso!')
+                form.current.reset()
+            })
+            .catch(() =>{
+                console.log('Erro ao enviar email!')
+            })
+
     }
 
     useEffect(() => {
@@ -38,8 +56,7 @@ const Home = () => {
                 <div className={styles.menuContainer}>
                     <h2 className={styles.menu}><Link activeClass={styles.activeLink} to='home' spy={true} smooth={true} offset={-100} duration={500}>Início</Link></h2>
                     <h2 className={styles.menu}><Link activeClass={styles.activeLink} to='projects' spy={true} smooth={true} offset={-30} duration={500}>Projetos</Link></h2>
-                    <h2 className={styles.menu}><Link activeClass={styles.activeLink} to='about-me' spy={true} smooth={true} offset={-30} duration={500}>Sobre Mim</Link></h2>
-                    <h2 className={styles.menu}><Link activeClass={styles.activeLink} to='contact-me' spy={true} smooth={true} offset={-30} duration={500}>Contatos</Link></h2>
+                    <h2 className={styles.menu}><Link activeClass={styles.activeLink} to='about-me' spy={true} smooth={true} offset={-30} duration={500}>Sobre Mim / Contato</Link></h2>
                 </div>
             </nav>
             <section className={styles.presentationSection} id='home'>
@@ -48,21 +65,21 @@ const Home = () => {
                     <h3 className={styles.presentationContentName}>Me chamo Janderson</h3>
                     <h1 className={styles.presentationContent}>Desenvolvedor Front<span className={styles.colorChange}>-</span>End</h1>
                     <div className={styles.buttonContainer}>
-                        <button className={styles.myResume} style={{borderRadius:'50%'}}>
-                            <a href='https://github.com/jandersonpacheco' target='_blank' style={{color:'#fff', textDecoration:'none'}}>
-                                <img style={{maxWidth:'2.5vh'} } src='https://images.icon-icons.com/3685/PNG/512/github_logo_icon_229278.png'/>
-                            </a>
-                        </button>
-                        <button className={styles.myResume} style={{borderRadius:'50%'}}>
-                            <a href='http://www.linkedin.com/in/janderson-oliveira-pacheco-749ab9141' target='_blank' style={{color:'#fff', textDecoration:'none'}}>
-                            <img style={{maxWidth:'2.5vh', borderRadius:'50%'} } src='https://i.pinimg.com/736x/17/36/fa/1736fa4a3cc0444c3e9d742d1a070a47.jpg'/>
-                            </a>
-                        </button>
-                    </div>
-                    <div className={styles.buttonContainer}>
                         <button className={styles.newJob}>Tem um projeto para mim?</button>
                         <button className={styles.myResume} onClick={handleDownload}>Meu Currículo
                             <img className={styles.downloadImg} src={download} />
+                        </button>
+                    </div>
+                    <div className={styles.buttonContainer}>
+                        <button className={styles.myResume} style={{border:'none'}}>
+                            <a href='https://github.com/jandersonpacheco' target='_blank' style={{color:'#fff', textDecoration:'none'}}>
+                                <img style={{maxWidth:'4vh'} } src='https://images.icon-icons.com/3685/PNG/512/github_logo_icon_229278.png'/>
+                            </a>
+                        </button>
+                        <button className={styles.myResume} style={{border:'none'}}>
+                            <a href='http://www.linkedin.com/in/janderson-oliveira-pacheco-749ab9141' target='_blank' style={{color:'#fff', textDecoration:'none'}}>
+                            <img style={{maxWidth:'4vh', borderRadius:'50%'} } src='https://i.pinimg.com/736x/17/36/fa/1736fa4a3cc0444c3e9d742d1a070a47.jpg'/>
+                            </a>
                         </button>
                     </div>
                 </div>
@@ -103,7 +120,7 @@ const Home = () => {
                                 <button className={styles.externalLink} >
                                     <a href='https://github.com/jandersonpacheco/tvshow_social_media.git' target='_blank' style={{color:'#fff', textDecoration:'none'}}>Ir para GitHub</a>
                                 </button>
-                                <button className={styles.externalLink}>
+                                <button className={styles.externalLink} style={{marginLeft:'1px'}}>
                                     <a href='https://tvshow-social-media.vercel.app/' target='_blank' style={{color:'#fff', textDecoration:'none'}}>Ir para Projeto</a>
                                 </button>
                             </div>
@@ -112,20 +129,32 @@ const Home = () => {
                 </div>
             </section>
             <section className={styles.aboutSection} id='about-me'>
-                <div className={styles.competenseContainer}>
-                    <div className={styles.compentenseContent}>
-                        <img className={styles.compentenseImg} src={webDev} />
-                        <h2 className={styles.compentenseTitle}>Desenvolvimento de Website</h2>
-                    </div>
-                    <div className={styles.compentenseContent}>
-                        <img className={styles.compentenseImg} src={hosting} alt='hosting image' />
-                        <h2 className={styles.compentenseTitle}>Hospedagem de Website</h2>
-                    </div>
-                </div>
-                <div className={styles.aboutMeContainer}>
+            <div className={styles.aboutMeContainer}>
                     <h1 className={styles.aboutMeTitle}>Sobre Mim</h1>
-                    <p className={styles.aboutMeContent}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae praesentium provident aliquam eaque at fugiat! Ut nulla sequi, adipisci quae necessitatibus, delectus vitae dolorum nobis perspiciatis incidunt quisquam nostrum! Voluptate.</p>
+                    <p className={styles.aboutMeContent}>
+                        Meu nome é Janderson e sou um programador frontend apaixonado por tecnologia e inovação. Atualmente, estou no penúltimo semestre de Análise e Desenvolvimento de Sistemas e busco constantemente aprimorar minhas habilidades e aprender novas tecnologias para me tornar um desenvolvedor mais completo.
+                    </p>
+                    <p className={styles.aboutMeContent}>
+                        Tenho uma grande paixão por React, onde tenho trabalhado no desenvolvimento de interfaces dinâmicas e eficientes, sempre focado em criar soluções que melhorem a experiência do usuário. Acredito que a tecnologia tem o poder de resolver problemas diários e de transformar ideias em realidade.
+                    </p>
+                    <p className={styles.aboutMeContent}>
+                    Estou sempre em busca de novos desafios que me permitam crescer profissionalmente e contribuir com soluções criativas e funcionais para as necessidades de cada projeto. Se você está em busca de um desenvolvedor dedicado e em constante evolução, ficarei feliz em conectar e explorar novas oportunidades!
+                    </p>
                 </div>
+                <form className={styles.formContainer} ref={form} onSubmit={handleFormSubmit}>
+                        <h1 className={styles.aboutMeTitle}>Fale comigo</h1>
+                        <div className={styles.formContainer}>
+                            <label htmlFor='name' className={styles.formText}>Nome</label>
+                            <input type='text' id='name' name='name' className={styles.formInput} placeholder='Digite seu nome' autoComplete='off' required />
+                            <label htmlFor='email' className={styles.formText}>Email</label>
+                            <input type='email' id='email' name='email' className={styles.formInput} placeholder='Digite seu email' autoComplete='off' required />
+                            <label htmlFor='title' className={styles.formText}>Título</label>
+                            <input type='text' id='title' name='title' className={styles.formInput} placeholder='Digite o assunto' autoComplete='off' required />
+                            <label htmlFor='message' className={styles.formText}>Mensagem</label>
+                            <textarea id='message' name='message' className={styles.formMessagetextarea} placeholder='Digite sua mensagem' autoComplete='off' required ></textarea>
+                            <button className={styles.formButton} type='submit'>Enviar</button>
+                        </div>
+                    </form>
             </section>
         </>
     )
