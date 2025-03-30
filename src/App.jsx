@@ -1,12 +1,12 @@
 
-import TestScrollSpy from './Home/TestScrollSpy'
-import Home from './Home/Home'
+import Test from './Components/Test'
+import Presentation from './Components/Presantation'
 
 function App() {
 
   return (
     <>
-      <Home />
+      <Presentation />
     </>
   )
 }

@@ -1,7 +1,7 @@
 import { Link } from 'react-scroll'
-import styles from './testScrollSpy.module.css'
+import styles from './test.module.css'
 
-const TestSmooth = () => {
+const Test = () => {
     return (
         <>  
             <nav className={styles.nav}>
@@ -24,4 +24,4 @@ const TestSmooth = () => {
     )
 }
 
-export default TestSmooth;
+export default Test

@@ -1,0 +1,114 @@
+@import url('href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&display=swap');
+
+body{
+    font-family: "Big Shoulders", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    background-color: #070707;
+    color: #fff
+}
+
+.projectContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 4vh;
+    background-color: #000;
+}
+
+.projectContent {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-self: flex-start;
+    justify-content: center;
+    margin: 0 10vh;    
+}
+
+.slide{
+    width: 55vh;
+    height: 38vh;
+    border-radius: 5%;
+}
+
+.carouselContainer {
+    position: relative;
+    width: 100%;
+}
+
+.projectName{
+    font-size: 3vh;
+    display: flex;
+    align-self: flex-start;
+    margin: 0 10vh 1.5vh
+}
+
+.projectDescription{
+    font-size: 2vh;
+    display: flex;
+    align-self: flex-start;
+    margin: 0 4.5vh 2vh
+}
+
+.highlightTitle{
+    font-size: 2vh;
+    font-weight: 600;
+    display: flex;
+    margin: 0 4.5vh
+}
+
+.highlightContainer{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vh;
+}
+
+.highlight{
+    font-size: 1.8vh;
+    display: flex;
+    align-self: flex-start;
+}
+
+.techVariation{
+    font-weight: 200;
+}
+
+.projectDetail{
+    font-size: 2vh;
+    font-weight: 600;
+    display: flex;
+    margin: 0 4.5vh 1vh
+}
+
+.externalLinkContainer{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 4vh;
+    margin-top: 3vh;
+}
+
+.externalLink:hover, .formButton:hover{
+    background-color: #dd8006;
+    color:#fff
+}
+
+.externalLink{
+    display: flex;
+    align-items: center;
+    column-gap: 1vh;
+    border: 1px solid;
+    border-radius: 5%;
+    padding:1.5vh;
+    font-size: 1.5vh;
+    font-weight: 600;
+    border-color: #dd8006;
+    background-color: #000;
+    cursor: pointer;
+    margin: 0 4.5vh 1vh;
+}
+
+.activeLink{
+    color:#dd8006;
+}
