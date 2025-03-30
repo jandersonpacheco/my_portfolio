@@ -1,4 +1,4 @@
-@import url('href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&display=swap');
 
 body{
     font-family: "Big Shoulders", sans-serif;
@@ -9,137 +9,255 @@ body{
     color: #fff
 }
 
-img{
-    width:200px;
-    height:auto
-}
-
-.nav{
-    position: fixed;
-    width: 60.5%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: baseline;
-    padding: 0 10vh;
-    margin: 0 30vh;
-    font-size: 1.8vh;
-    background: linear-gradient(145deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 93%, rgba(221,128,6,1) 100%);
-    transition: all 0.3s ease;
-}
-
-.nav.scrolled {
-    background: rgba(0, 0, 0, 0.8);
-}
-
-.titleName{
-        font-size: 2vh;
-}
-
-.menu:hover{
-    color:rgb(221, 128, 6);
-    cursor: pointer;
-}
-
-.menuContainer{
-    display: flex;
-    flex-direction: row;
-    column-gap: 1.7vh;
-    font-size: 1.2vh;
-}
-
-.presentationSection{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    max-height: 55vh;
-    margin: 0 30vh;
-    padding: 5vh 10vh;
-    font-size: 4vh;
-    background: linear-gradient(145deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 62%, rgba(221,128,6,1) 100%)
-
-}
-
-.presentationContentName{
-    font-weight: 100;
+@media (max-width: 480px) {
+    .nav{
+        position: fixed;
+        width: 79.1%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+        background: linear-gradient(145deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 93%, rgba(221,128,6,1) 100%);
+        transition: all 0.3s ease;
     }
 
-.buttonContainer{
-    display: flex;
-    flex-direction: row;
-    column-gap: 1.5vh;
-    padding-bottom: 4vh ;
+    .nav.scrolled {
+        background: rgba(0, 0, 0, 0.8);
+    }
+    
+    .titleName, .menu{
+            font-size: 1.5rem;
+    }
+
+    .menu:hover{
+        color:rgb(221, 128, 6);
+        cursor: pointer;
+    }
+    
+    .menuContainer{
+        display: flex;
+        flex-direction: row;
+        column-gap: 3vh;
+    }
+    
+    .presentationSection{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        max-width:77.5vh;
+        width: 77.5vh;
+        max-height: 85vh;
+        padding: 10vh 10vh;
+        font-size: 6vh;
+        background: linear-gradient(145deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 62%, rgba(221,128,6,1) 100%)
+    }
+
+    .presentationContentName{
+        font-weight: 100;
+    }
+
+    .profileImg{
+        max-width:37vh;
+        padding-top: 1vh;
+        height: fit-content;
+        border-radius: 50%;
+    
+    }
+
+    .buttonContainer{
+        display: flex;
+        flex-direction: row;
+        column-gap: 1.5vh;
+        padding-bottom: 4vh ;
+    }
+    
+    .myResume, .newJob, .formButton{
+        display: flex;
+        align-items: center;
+        column-gap: 1vh;
+        border: 1px solid;
+        border-radius: 5%;
+        padding:1.5vh;
+        font-size: 2vh;
+        font-weight: 600;
+        border-color: #dd8006;
+        background-color: #000;
+        color:#fff;
+        cursor: pointer;
+    }
+    
+    .downloadImg{
+        max-width: 3vh;
+    }
+    
+    .myResume:hover, .newJob:hover{
+        background-color: #dd8006;
+        color:#fff
+    }
+    
+    .techPresentationSection{
+        background-color: #070707;
+        color: #fff;
+        min-width: 98vh
+    }
+    
+    .techPresentationContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .activeLink{
+        color:#dd8006;
+    }
+    
+    .projectSection{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #000;
+    }
+    
+    .aboutSection{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        column-gap: 20vh;
+        margin: 0 30vh 0 30vh;
+        padding: 0 10vh 200px;
+        background-color: #000;
+    }
+    
+    
+}    
+
+@media (min-width: 769px){
+    .nav{
+        position: fixed;
+        width: 62.9%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+        padding: 0 10vh;
+        margin: 0 30vh;
+        background: linear-gradient(145deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 93%, rgba(221,128,6,1) 100%);
+        transition: all 0.3s ease;
+    }
+
+    .nav.scrolled {
+        background: rgba(0, 0, 0, 0.8);
+    }
+    
+    .titleName{
+            font-size: 2vh;
+    }
+    
+    .menu:hover{
+        color:rgb(221, 128, 6);
+        cursor: pointer;
+    }
+    
+    .menuContainer{
+        display: flex;
+        flex-direction: row;
+        column-gap: 1.7vh;
+        font-size: 1.2vh;
+    }
+    
+    .presentationSection{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        max-height: 55vh;
+        margin: 0 30vh;
+        padding: 5vh 10vh;
+        font-size: 4vh;
+        background: linear-gradient(145deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 62%, rgba(221,128,6,1) 100%)
+    
+    }
+    
+    .presentationContentName{
+        font-weight: 100;
+        }
+    
+    .buttonContainer{
+        display: flex;
+        flex-direction: row;
+        column-gap: 1.5vh;
+        padding-bottom: 4vh ;
+    }
+    
+    .myResume, .newJob, .formButton{
+        display: flex;
+        align-items: center;
+        column-gap: 1vh;
+        border: 1px solid;
+        border-radius: 5%;
+        padding:1.5vh;
+        font-size: 1.5vh;
+        font-weight: 600;
+        border-color: #dd8006;
+        background-color: #000;
+        color:#fff;
+        cursor: pointer;
+    }
+    
+    .downloadImg{
+        max-width: 3vh;
+    }
+    
+    .myResume:hover, .newJob:hover{
+        background-color: #dd8006;
+        color:#fff
+    }
+    
+    .profileImg{
+        width:35vh ; 
+        padding-top: 1vh;
+        height: fit-content;
+        border-radius: 50%;
+    
+    }
+    
+    .techPresentationSection{
+        background-color: #070707;
+        color: #5e5959
+    }
+    
+    .techPresentationSection:hover{
+        color:#fff
+    }
+    
+    .techPresentationContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 2vh 23vh;
+        padding: 0 10vh;
+    }
+    
+    .activeLink{
+        color:#dd8006;
+    }
+    
+    .projectSection{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 30vh;
+        background-color: #000;
+    }
+    
+    .aboutSection{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        column-gap: 20vh;
+        margin: 0 30vh 0 30vh;
+        padding: 0 10vh 200px;
+        background-color: #000;
+    }  
 }
-
-.myResume, .newJob, .formButton{
-    display: flex;
-    align-items: center;
-    column-gap: 1vh;
-    border: 1px solid;
-    border-radius: 5%;
-    padding:1.5vh;
-    font-size: 1.5vh;
-    font-weight: 600;
-    border-color: #dd8006;
-    background-color: #000;
-    color:#fff;
-    cursor: pointer;
-}
-
-.downloadImg{
-    max-width: 3vh;
-}
-
-.myResume:hover, .newJob:hover{
-    background-color: #dd8006;
-    color:#fff
-}
-
-.profileImg{
-    width:35vh ; 
-    padding-top: 1vh;
-    height: fit-content;
-    border-radius: 50%;
-
-}
-
-.techPresentationSection{
-    background-color: #070707;
-    color: #5e5959
-}
-
-.techPresentationSection:hover{
-    color:#fff
-}
-
-.techPresentationContainer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin: 2vh 23vh;
-    padding: 0 10vh;
-}
-
-.activeLink{
-    color:#dd8006;
-}
-
-.projectSection{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0 30vh;
-    background-color: #000;
-}
-
-.aboutSection{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    column-gap: 20vh;
-    margin: 0 30vh 0 30vh;
-    padding: 0 10vh 200px;
-    background-color: #000;
-}
-

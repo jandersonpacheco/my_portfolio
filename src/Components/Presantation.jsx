@@ -64,7 +64,7 @@ const Apresentation = () => {
                         </button>
                     </div>
                 </div>
-                <div>
+                <div className={styles.profileContainer}>
                     <img className={styles.profileImg} src={profile} />
                 </div>
             </section>
