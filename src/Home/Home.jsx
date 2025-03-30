@@ -145,13 +145,13 @@ const Home = () => {
                         <h1 className={styles.aboutMeTitle}>Fale comigo</h1>
                         <div className={styles.formContainer}>
                             <label htmlFor='name' className={styles.formText}>Nome</label>
-                            <input type='text' id='name' name='name' className={styles.formInput} placeholder='Digite seu nome' autoComplete='off' required />
+                            <input type='text' id='name' name='name' className={styles.formInput} placeholder='Digite seu nome' autoComplete="new-password" required/>
                             <label htmlFor='email' className={styles.formText}>Email</label>
-                            <input type='email' id='email' name='email' className={styles.formInput} placeholder='Digite seu email' autoComplete='off' required />
+                            <input type='email' id='email' name='email' className={styles.formInput} placeholder='Digite seu email' autoComplete="off" required />
                             <label htmlFor='title' className={styles.formText}>Título</label>
-                            <input type='text' id='title' name='title' className={styles.formInput} placeholder='Digite o assunto' autoComplete='off' required />
+                            <input type='text' id='title' name='title' className={styles.formInput} placeholder='Digite o assunto' autoComplete="off" required />
                             <label htmlFor='message' className={styles.formText}>Mensagem</label>
-                            <textarea id='message' name='message' className={styles.formMessagetextarea} placeholder='Digite sua mensagem' autoComplete='off' required ></textarea>
+                            <textarea id='message' name='message' className={styles.formMessagetextarea} placeholder='Digite sua mensagem' autoComplete="off" required ></textarea>
                             <button className={styles.formButton} type='submit'>Enviar</button>
                         </div>
                     </form>

@@ -263,7 +263,7 @@ img{
 
 .formInput:focus, .formMessagetextarea:focus {
     outline: none;
-  }
+}
 
 .formMessagetextarea{
     display: flex;
