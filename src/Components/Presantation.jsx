@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-scroll'
 import styles from './presentation.module.css'
-import profile from '../public/assets/profile.jpeg'
-import download from '../public/assets/download.png'
+import profile from '../assets/profile.jpeg'
+import download from '../assets/download.png'
 import Projects from './Projetcs.jsx'
 import AboutAndContact from './AboutAndContact.jsx'
 

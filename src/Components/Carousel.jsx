@@ -4,10 +4,10 @@ import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import styles from './projects.module.css';
-import homepage from '../public/assets/homepage.png';
-import tvShowDetail from '../public/assets/tvshow_detail.png';
-import castAndEps from '../public/assets/cast_and_eps.png';
-import SSOLogin from '../public/assets/sso_login.png';
+import homepage from '../assets/homepage.png';
+import tvShowDetail from '../assets/tvshow_detail.png';
+import castAndEps from '../assets/cast_and_eps.png';
+import SSOLogin from '../assets/sso_login.png';
 
 const Carousel = () => {
   return (
