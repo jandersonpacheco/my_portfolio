@@ -44,7 +44,6 @@ const Apresentation = () => {
                     <h3 className={styles.presentationContentName}>Me chamo Janderson</h3>
                     <h1 className={styles.presentationContent}>Desenvolvedor Front<span className={styles.colorChange}>-</span>End</h1>
                     <div className={styles.buttonContainer}>
-                        <button className={styles.newJob}>Tem um projeto para mim?</button>
                         <button className={styles.myResume} onClick={handleDownload}>Meu Currículo
                             <img className={styles.downloadImg} src='/assets/download.png' />
                         </button>

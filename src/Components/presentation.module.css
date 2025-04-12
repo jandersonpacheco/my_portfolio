@@ -5,6 +5,7 @@ body{
     font-optical-sizing: auto;
     font-weight: weight;
     font-style: normal;
+    overflow-x: hidden;
     background-color: #070707;
     color: #fff
 }
@@ -12,7 +13,7 @@ body{
 @media (max-width: 480px) {
     .nav{
         position: fixed;
-        width: 29.5%;
+        width: 57%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -26,7 +27,7 @@ body{
     }
     
     .titleName, .menu{
-            font-size: 0.5rem;
+            font-size: 1rem;
     }
 
     .menu:hover{
@@ -37,32 +38,33 @@ body{
     .menuContainer{
         display: flex;
         flex-direction: row;
-        column-gap: 3vh;
+        column-gap: 2.5em;
     }
     
     .presentationSection{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        max-width:100%;
-        width: 40%;
-        max-height: 85vh;
-        padding: 10vh 10vh;
+        width: 85%;
+        padding: 3em 2em;
         font-size: 1.2rem;
-        background: linear-gradient(145deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 62%, rgba(221,128,6,1) 100%)
+        background: linear-gradient(145deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 62%, rgba(221,128,6,1) 100%);
+        overflow-x: hidden;
     }
 
     .presentationContentName{
         font-weight: 100;
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
 
+    .profileContainer{
+        padding:0 0 0 2em;
+
+    }
     .profileImg{
-        max-width:37vh;
-        padding-top: 1vh;
-        height: fit-content;
+        max-width:100%;
+        height: auto;
         border-radius: 50%;
-    
     }
 
     .buttonContainer{
@@ -74,21 +76,27 @@ body{
     
     .myResume, .newJob, .formButton{
         display: flex;
+        flex-direction: column;
         align-items: center;
-        column-gap: 1vh;
+        row-gap: .5em;
+        column-gap: 1em;
         border: 1px solid;
         border-radius: 5%;
-        padding:1.5vh;
-        font-size: 2vh;
+        padding: fit-content;
+        padding-top: 0.2em;
+        font-size: .8rem;
         font-weight: 600;
         border-color: #dd8006;
         background-color: #000;
         color:#fff;
         cursor: pointer;
+        white-space: nowrap;
+        overflow: hidden; 
+        text-overflow: ellipsis;
     }
     
     .downloadImg{
-        max-width: 3vh;
+        max-width: 2em;
     }
     
     .myResume:hover, .newJob:hover{
@@ -99,7 +107,8 @@ body{
     .techPresentationSection{
         background-color: #070707;
         color: #fff;
-        min-width: 98vh
+        font-size: .5rem;
+        width: 100%
     }
     
     .techPresentationContainer{
@@ -125,8 +134,6 @@ body{
         justify-content: flex-start;
         align-items: flex-start;
         column-gap: 20vh;
-        margin: 0 30vh 0 30vh;
-        padding: 0 10vh 200px;
         background-color: #000;
     }
     
