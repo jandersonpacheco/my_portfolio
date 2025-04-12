@@ -24,7 +24,7 @@ const Carousel = () => {
         onSlideChange={() => console.log('slide change')}
         onSwiper={(swiper) => console.log(swiper)}
         style={{
-          maxWidth: '55vh',
+          maxWidth: '85vh',
           height: 'fit-content'
         }}
       >
