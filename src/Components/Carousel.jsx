@@ -4,10 +4,6 @@ import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import styles from './projects.module.css';
-import homepage from '../assets/homepage.png';
-import tvShowDetail from '../assets/tvshow_detail.png';
-import castAndEps from '../assets/cast_and_eps.png';
-import SSOLogin from '../assets/sso_login.png';
 
 const Carousel = () => {
   return (
@@ -28,10 +24,11 @@ const Carousel = () => {
           height: 'fit-content'
         }}
       >
-        <SwiperSlide><img className={styles.slide} src={homepage} /></SwiperSlide>
-        <SwiperSlide><img className={styles.slide} src={tvShowDetail} /></SwiperSlide>
-        <SwiperSlide><img className={styles.slide} src={castAndEps} /></SwiperSlide>
-        <SwiperSlide><img className={styles.slide} src={SSOLogin} /></SwiperSlide>
+        {/* Usando caminho absoluto da pasta public */}
+        <SwiperSlide><img className={styles.slide} src="/assets/homepage.png" /></SwiperSlide>
+        <SwiperSlide><img className={styles.slide} src="/assets/tvshow_detail.png" /></SwiperSlide>
+        <SwiperSlide><img className={styles.slide} src="/assets/cast_and_eps.png" /></SwiperSlide>
+        <SwiperSlide><img className={styles.slide} src="/assets/SSO_login.png" /></SwiperSlide>
       </Swiper>
       <div className="swiper-button-next"></div>
       <div className="swiper-button-prev"></div>

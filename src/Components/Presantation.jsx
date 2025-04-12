@@ -1,8 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-scroll'
 import styles from './presentation.module.css'
-import profile from '../assets/profile.jpeg'
-import download from '../assets/download.png'
 import Projects from './Projetcs.jsx'
 import AboutAndContact from './AboutAndContact.jsx'
 
@@ -48,7 +46,7 @@ const Apresentation = () => {
                     <div className={styles.buttonContainer}>
                         <button className={styles.newJob}>Tem um projeto para mim?</button>
                         <button className={styles.myResume} onClick={handleDownload}>Meu Currículo
-                            <img className={styles.downloadImg} src={download} />
+                            <img className={styles.downloadImg} src='/assets/download.png' />
                         </button>
                     </div>
                     <div className={styles.buttonContainer}>
@@ -65,7 +63,7 @@ const Apresentation = () => {
                     </div>
                 </div>
                 <div className={styles.profileContainer}>
-                    <img className={styles.profileImg} src={profile} />
+                    <img className={styles.profileImg} src='/assets/profile.jpeg' />
                 </div>
             </section>
             <section className={styles.techPresentationSection}>
